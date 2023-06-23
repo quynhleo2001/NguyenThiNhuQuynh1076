@@ -1,0 +1,41 @@
+@model IEnumerable<BaiKiemTra.Models.NTNQStudent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NTNQStudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NTNQAdress)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NTNQStudentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NTNQAdress)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NTNQStudentID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NTNQStudentID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NTNQStudentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

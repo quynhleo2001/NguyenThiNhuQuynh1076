@@ -1,0 +1,43 @@
+@model BaiKiemTra.Models.NTNQStudent
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>NTNQStudent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NTNQStudentID" class="control-label"></label>
+                <input asp-for="NTNQStudentID" class="form-control" />
+                <span asp-validation-for="NTNQStudentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NTNQStudentName" class="control-label"></label>
+                <input asp-for="NTNQStudentName" class="form-control" />
+                <span asp-validation-for="NTNQStudentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NTNQAdress" class="control-label"></label>
+                <input asp-for="NTNQAdress" class="form-control" />
+                <span asp-validation-for="NTNQAdress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
