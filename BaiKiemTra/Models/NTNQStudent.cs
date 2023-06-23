@@ -11,5 +11,6 @@ namespace BaiKiemTra.Models
         public string NTNQStudentName { get; set; }
         [Display(Name = "Địa chỉ")]
         public string NTNQAdress { get; set; }
+        
     }
 }
